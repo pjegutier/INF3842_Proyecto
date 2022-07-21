@@ -2,6 +2,8 @@ import altair as alt
 import pandas as pd
 import numpy as np
 
+print('hola')
+
 def main():
     source = pd.DataFrame({
         'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
