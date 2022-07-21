@@ -4,6 +4,11 @@ import streamlit as st
 import subprocess
 import sys
 
+st.write('Profesora: Tamara Cucumides'
+          'Alumnos:'
+          'Luis Campos \n Pablo Gutierrez')
+
+
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
 
 bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
