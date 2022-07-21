@@ -8,7 +8,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
 
 bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
-line = alt.Chart(bici).mark_line().encode(
+line = alt.Chart(bici).mark_circle(size=60).encode(
     x = 'ns1:LatitudeDegrees4',
     y = 'ns1:LongitudeDegrees5'
 ).properties(width=500, height=500)
