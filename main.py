@@ -14,4 +14,7 @@ line = alt.Chart(df).mark_line().encode(
     y = 'values'
 ).properties(width=500, height=500)
 
+bici = pd.read_xml('chiguayante-leonera-valle-nonguen.tcx')
+print(bici.head())
 st.altair_chart(line)
+
