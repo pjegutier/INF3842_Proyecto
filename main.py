@@ -4,9 +4,9 @@ import streamlit as st
 import subprocess
 import sys
 
-st.write('Profesora: Tamara Cucumides\n')
+st.write('Profesora: Tamara Cucumides\n'
           'Alumnos:\n'
-          '\t Luis Campos \n'
+          '\t Luis Campos\n'
           '\t Pablo Gutierrez')
 
 
