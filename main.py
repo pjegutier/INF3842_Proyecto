@@ -13,9 +13,9 @@ line = alt.Chart(bici).mark_circle(size=60).encode(
     y = 'ns1:LongitudeDegrees5:Q'
 ).properties(width=500, height=500).interactive()
 
-st.write(('Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motivara.\n'
-          'El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde'))
-st.write('multiples formas de visualización')
+st.write('Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motiva.'
+          'El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde'
+          'multiples formas de visualización')
 
 st.altair_chart(line)
 st.write(bici.head())
