@@ -1,19 +1,17 @@
 import altair as alt
+import streamlit as st
 import pandas as pd
-import numpy as np
 
-print('hola')
+data_set = {
+    'countries': ['India', 'Australia', 'Japan', 'America', 'Russia'],
+    'values': [4500, 2500, 1053, 500, 3200]
+}
 
-def main():
-    source = pd.DataFrame({
-        'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
-        'b': [28, 55, 43, 91, 81, 53, 19, 87, 52]
-    })
+df = pd.DataFrame(data_set)
 
-    alt.Chart(source).mark_bar().encode(
-        x='a',
-        y='b'
-    )
+line = alt.Chart(df).mark_line().encode(
+    x = 'countries',
+    y = 'values'
+)
 
-if __name__== "__main__" :
-    main()
+st.altair_chart(line)
