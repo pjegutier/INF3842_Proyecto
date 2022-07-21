@@ -5,9 +5,7 @@ import subprocess
 import sys
 
 st.write('Profesora: Tamara Cucumides')
-st.write('Alumnos:')
-st.write('\t Luis Campos')
-st.write('\t Pablo Gutierrez')
+st.write('Alumnos: Luis Campos, Pablo Gutierrez')
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
 
