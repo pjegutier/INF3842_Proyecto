@@ -1,8 +1,10 @@
 import altair as alt
 import pandas as pd
 import streamlit as st
+import subprocess
+import sys
 
-pip install lxml
+subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
 
 data_set = {
     'countries': ['India', 'Australia', 'Japan', 'America', 'Russia'],
