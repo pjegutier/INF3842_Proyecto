@@ -12,6 +12,6 @@ df = pd.DataFrame(data_set)
 line = alt.Chart(df).mark_line().encode(
     x = 'countries',
     y = 'values'
-)
+).properties(width=500, height=500)
 
 st.altair_chart(line)
