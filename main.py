@@ -4,9 +4,10 @@ import streamlit as st
 import subprocess
 import sys
 
-st.write('Profesora: Tamara Cucumides'
-          'Alumnos:'
-          'Luis Campos \n Pablo Gutierrez')
+st.write('Profesora: Tamara Cucumides\n')
+          'Alumnos:\n'
+          '\t Luis Campos \n'
+          '\t Pablo Gutierrez')
 
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
