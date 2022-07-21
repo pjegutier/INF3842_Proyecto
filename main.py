@@ -13,6 +13,6 @@ bici = pd.read_csv('san-juan-xl.csv',sep=';')
 #     y = 'values'
 # ).properties(width=500, height=500)
 
-st.altair_chart(line)
+# st.altair_chart(line)
 st.write(bici.head())
 
