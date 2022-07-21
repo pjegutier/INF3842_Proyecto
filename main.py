@@ -1,17 +1,13 @@
 import altair as alt
 import streamlit as st
-import pandas as pd
+from vega_datasets import data
 
-data_set = {
-    'countries': ['India', 'Australia', 'Japan', 'America', 'Russia'],
-    'values': [4500, 2500, 1053, 500, 3200]
-}
+df_1 = data.cars()
+scatter  = alt.Chart(df_1).mark_point().encode(x='Horsepower', y='Miles_per_Gallon')
 
-df = pd.DataFrame(data_set)
+df_2 = data.iris()
+area = alt.Chart(df_2).mark_area(color="maroon").encode(x='sepalLength', y='petalLength')
 
-line = alt.Chart(df).mark_line().encode(
-    x = 'countries',
-    y = 'values'
-)
+obj = alt.vconcat(scatter, area) #Vertical Concatenation
 
-st.altair_chart(line)
+st.altair_chart(obj)
