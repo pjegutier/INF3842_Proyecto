@@ -2,7 +2,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-pip3 install lxml
+pip install lxml
 
 data_set = {
     'countries': ['India', 'Australia', 'Japan', 'America', 'Russia'],
