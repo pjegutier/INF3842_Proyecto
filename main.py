@@ -4,7 +4,6 @@ import streamlit as st
 import subprocess
 import sys
 
-
 # cargamos base de datos
 bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
