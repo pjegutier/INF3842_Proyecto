@@ -4,18 +4,26 @@ import streamlit as st
 import subprocess
 import sys
 
+
+# cargamos base de datos
+bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
+
 st.set_page_config(layout="centered", page_icon="🚲", page_title="Rutas en Bici")
 
 # Rutas en Bici
 
 st.title("🚲 Rutas en Bici")
 
+# lista de rutas
+rutas = source.symbol.unique()
+lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
+
+space(1) # definimos espacio
+
 st.write('Profesora: Tamara Cucumides')
 st.write('Alumnos: Luis Campos, Pablo Gutierrez')
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
-
-bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
     x = 'ns1:LatitudeDegrees4:Q',
