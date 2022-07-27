@@ -16,9 +16,7 @@ st.title("🚲 Rutas en Bici")
 
 # lista de rutas
 # rutas = source.symbol.unique()
-# lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
-
-space(1) # definimos espacio
+# lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3]
 
 st.write('Profesora: Tamara Cucumides')
 st.write('Alumnos: Luis Campos, Pablo Gutierrez')
