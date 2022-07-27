@@ -4,7 +4,7 @@ import streamlit as st
 import subprocess
 import sys
 
-st.set_page_config(layout="centered", page_icon="🚲", page_title="Rutas en Bici")
+st.set_page_config(layout="centered", page_title="Rutas en Bici") #, page_icon="🚲"
 
 st.write('Profesora: Tamara Cucumides')
 st.write('Alumnos: Luis Campos, Pablo Gutierrez')
