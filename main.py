@@ -68,7 +68,7 @@ with row1_2:
     options = st.multiselect(
      'What are your favorite colors',
      ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-        ['san_juan'], on_change = seleccion())
+        ['san_juan'], on_change = seleccion(,))
     
     def seleccion():
         if len(options) >= 2:
