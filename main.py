@@ -81,11 +81,12 @@ st.write(
                  "HexagonLayer",
                  data=bici,
                  get_position=["ns1:LongitudeDegrees5", "ns1:LatitudeDegrees4"],
-                 radius=100,
-                 elevation_scale=4,
-                 elevation_range=[0, 1000],
+                 auto_highlight=True,
+                 elevation_scale=50,
                  pickable=True,
+                 elevation_range=[0, 3000],
                  extruded=True,
+                 coverage=1
              ),
          ],
     )
