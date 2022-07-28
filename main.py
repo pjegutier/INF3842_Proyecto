@@ -68,16 +68,18 @@ with row1_2:
     options = st.multiselect(
      'What are your favorite colors',
      ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-        ['san_juan', 'buitrera'])
-    
-    
-    button = st.button("Print Locations",disabled=False)
+        ['san_juan'], on_change = seleccion())
+    def seleccion:
+        if len(options) >= 2:
+            options.disabled = True
+            
+#     button = st.button("Print Locations",disabled=False)
 
-    if button :
-        if len(options) <= 2:
-        st.write(options)
-    else:
-        st.warning("You have to select only 2 locations")
+#     if button :
+#         if len(options) <= 2:
+#         st.write(options)
+#     else:
+#         st.warning("You have to select only 2 locations")
 
         #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
