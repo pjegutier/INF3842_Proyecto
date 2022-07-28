@@ -118,3 +118,4 @@ with row2_2:
     
 st.write(bici.head())
 
+st.write(bici[['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4']])
