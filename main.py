@@ -69,9 +69,12 @@ with row1_2:
      'What are your favorite colors',
      ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
         ['san_juan'], on_change = seleccion())
-    def seleccion:
+    
+    def seleccion():
         if len(options) >= 2:
             options.disabled = True
+        else:
+            options.disabled = False            
             
 #     button = st.button("Print Locations",disabled=False)
 
