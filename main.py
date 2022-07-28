@@ -54,21 +54,6 @@ with row1_1:
     
     """
     )
-# hour_selected = st.multiselect(
-#     'Elige tus Rutas', 'san_juan', 'buitrera')
-
-
-options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
-
-st.write('You selected:', options)
-
-
-
-
-
 
 
 with row1_2:
@@ -80,8 +65,14 @@ with row1_2:
     """
     )
     # lista de rutas
-    # rutas = source.symbol.unique()
-    # lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
+    options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
+    
+    rutas = source.symbol.unique()
+    lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
+
     
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
