@@ -41,19 +41,19 @@ with row1_2:
     El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
     """
     )
-#     def seleccion():
-#         if len(options) >= 2:
-#             options.disabled = True
-#         else:
-#             options.disabled = False            
+    def seleccion():
+        if len(options) >= 2:
+            options.disabled = True
+        else:
+            options.disabled = False            
             
-#     # lista de rutas
-#     options = st.multiselect(
-#         'Elige ruta',
-#         ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-#         ['san_juan'])
+    # lista de rutas
+    options = st.multiselect(
+        'Elige ruta',
+        ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
+        ['san_juan'])
     
-#     print(len(options))
+    print(len(options))
             
 #     button = st.button("Print Locations",disabled=False)
 
@@ -68,21 +68,21 @@ with row1_2:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-# zoom = 12    
-# lat = np.average(san_juan['ns1:LatitudeDegrees4'])
-# lon = np.average(san_juan['ns1:LongitudeDegrees5'])
+zoom = 12    
+lat = np.average(san_juan['ns1:LatitudeDegrees4'])
+lon = np.average(san_juan['ns1:LongitudeDegrees5'])
     
-# with row2_1:
-#     st.write(
-#         pdk.Deck(
-#             map_style="mapbox://styles/mapbox/satellite-v9",
-#             initial_view_state={
-#                 "latitude": lat,
-#                 "longitude": lon,
-#                 "zoom": zoom,
-#                 "pitch": 50,}
-#         )
-#     )
+with row2_1:
+    st.write(
+        pdk.Deck(
+            map_style="mapbox://styles/mapbox/satellite-v9",
+            initial_view_state={
+                "latitude": lat,
+                "longitude": lon,
+                "zoom": zoom,
+                "pitch": 50,}
+        )
+    )
 
 # with row2_1:
 #     st.write(
