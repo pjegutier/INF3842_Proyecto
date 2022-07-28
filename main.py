@@ -118,7 +118,7 @@ with row2_1:
 
 # primera ruta
 with row2_2:
-    line = alt.Chart(vars(options[0])).mark_circle(size=60).encode(
+    line = alt.Chart(locals()[options[0]]).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
     ).properties(width=500, height=500)
