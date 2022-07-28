@@ -78,21 +78,33 @@ with row2_1:
                 "longitude": lon,
                 "zoom": zoom,
                 "pitch": 50,}
-    #         },
-    #         layers=[
-    #             pdk.Layer(
-    #                 "HexagonLayer",
-    #                 data=data,
-    #                 get_position=["lon", "lat"],
-    #                 radius=100,
-    #                 elevation_scale=4,
-    #                 elevation_range=[0, 1000],
-    #                 pickable=True,
-    #                 extruded=True,
-    #             ),
-    #         ],
         )
     )
+    
+# with row2_1:
+#     st.write(
+#         pdk.Deck(
+#             map_style="mapbox://styles/mapbox/satellite-v9",
+#             initial_view_state={
+#                 "latitude": lat,
+#                 "longitude": lon,
+#                 "zoom": zoom,
+#                 "pitch": 50,}
+#              },
+#              layers=[
+#                  pdk.Layer(
+#                      "HexagonLayer",
+#                      data=data,
+#                      get_position=["lon", "lat"],
+#                      radius=100,
+#                      elevation_scale=4,
+#                      elevation_range=[0, 1000],
+#                      pickable=True,
+#                      extruded=True,
+#                  ),
+#              ],
+#         )
+#     )
 
 with row2_2:
     line = alt.Chart(bici).mark_circle(size=60).encode(
