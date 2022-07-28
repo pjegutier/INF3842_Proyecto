@@ -62,43 +62,47 @@ with row1_2:
     El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
     """
     )
+    
+row2_1, row2_2 = st.columns((1, 1))
 
 zoom = 12    
 lat = np.average(bici['ns1:LatitudeDegrees4'])
 lon = np.average(bici['ns1:LongitudeDegrees5'])
 
-st.write(
-    pdk.Deck(
-        map_style="mapbox://styles/mapbox/light-v9",
-        initial_view_state={
-            "latitude": lat,
-            "longitude": lon,
-            "zoom": zoom,
-            "pitch": 50,}
-#         },
-#         layers=[
-#             pdk.Layer(
-#                 "HexagonLayer",
-#                 data=data,
-#                 get_position=["lon", "lat"],
-#                 radius=100,
-#                 elevation_scale=4,
-#                 elevation_range=[0, 1000],
-#                 pickable=True,
-#                 extruded=True,
-#             ),
-#         ],
+with row2_1:
+    st.write(
+        pdk.Deck(
+            map_style="mapbox://styles/mapbox/light-v9",
+            initial_view_state={
+                "latitude": lat,
+                "longitude": lon,
+                "zoom": zoom,
+                "pitch": 50,}
+    #         },
+    #         layers=[
+    #             pdk.Layer(
+    #                 "HexagonLayer",
+    #                 data=data,
+    #                 get_position=["lon", "lat"],
+    #                 radius=100,
+    #                 elevation_scale=4,
+    #                 elevation_range=[0, 1000],
+    #                 pickable=True,
+    #                 extruded=True,
+    #             ),
+    #         ],
+        )
     )
-)
 
-line = alt.Chart(bici).mark_circle(size=60).encode(
-    x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
-    y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
-).properties(width=500, height=500).interactive()
+with row2_2:
+    line = alt.Chart(bici).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
+    ).properties(width=500, height=500).interactive()
 
-st.write(''
-          ''
-          '')
+    st.write(''
+              ''
+              '')
 
 st.altair_chart(line)
 st.write(bici.head())
