@@ -32,16 +32,37 @@ bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
 st.set_page_config(layout="centered", page_icon="🚲", page_title="Rutas en Bici")
 
-# Rutas en Bici
-
-st.title("🚴🏾 Rutas en Bici")
-
 # lista de rutas
 # rutas = source.symbol.unique()
-# lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3]
+# lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
 
-st.write('Profesora: Tamara Cucumides')
-st.write('Alumnos: Luis Campos, Pablo Gutierrez')
+st.write('')
+st.write('')
+
+# Lay Out Superior
+row1_1, row1_2 = st.columns((2, 3))
+
+with row1_1:
+    st.title("🚴🏾 Rutas en Bici")
+    st.write(
+        """
+    ##
+    Profesora: Tamara Cucumides
+    Alumnos:   Luis Campos 
+               Pablo Gutierrez
+    """
+    )
+#     hour_selected = st.multiselect(
+#         'Elige tus Rutas', 0, 23)
+    
+with row1_2:
+    st.write(
+        """
+    ##
+    Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motiva.
+    El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
+    """
+    )
 
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
@@ -49,9 +70,9 @@ line = alt.Chart(bici).mark_circle(size=60).encode(
     y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
 ).properties(width=500, height=500).interactive()
 
-st.write('Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motiva.'
-          'El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde'
-          'multiples formas de visualización')
+st.write(''
+          ''
+          '')
 
 st.altair_chart(line)
 st.write(bici.head())
