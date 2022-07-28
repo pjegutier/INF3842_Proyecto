@@ -72,7 +72,7 @@ lon = np.average(bici['ns1:LongitudeDegrees5'])
 with row2_1:
     st.write(
         pdk.Deck(
-            map_style="mapbox://styles/mapbox/satellite",
+            map_style="satellite",
             initial_view_state={
                 "latitude": lat,
                 "longitude": lon,
