@@ -51,7 +51,7 @@ with row1_2:
     options = st.multiselect(
         'Elige ruta',
         ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-        ['san_juan'])
+        ['san_juan'],on_change = options())
     
     print(len(options))
             
