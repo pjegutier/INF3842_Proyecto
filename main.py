@@ -79,6 +79,7 @@ zoom = 12
 lat = np.average(san_juan['ns1:LatitudeDegrees4'])
 lon = np.average(san_juan['ns1:LongitudeDegrees5'])
 
+    
 with row2_1:
     st.write(
         pdk.Deck(
@@ -122,8 +123,11 @@ with row2_2:
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
     ).properties(width=500, height=500)
-    
-    st.altair_chart(line)
+
+    try:
+        st.altair_chart(line)
+    except:
+        None
     
 # segunda ruta
 with row2_3:
