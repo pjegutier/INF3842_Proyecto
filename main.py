@@ -11,7 +11,7 @@ st.set_page_config(layout="centered", page_icon="🚲", page_title="Rutas en Bic
 
 # Rutas en Bici
 
-st.title("🚲 Rutas en Bici")
+st.title("🚴‍♂️ Rutas en Bici")
 
 # lista de rutas
 # rutas = source.symbol.unique()
