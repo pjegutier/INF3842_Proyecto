@@ -70,16 +70,16 @@ lat = np.average(bici['ns1:LatitudeDegrees4'])
 lon = np.average(bici['ns1:LongitudeDegrees5'])
 
 with row2_1:
-     st.write(
-         pdk.Deck(
-             map_style="mapbox://styles/mapbox/satellite-v9",
-             initial_view_state={
-                 "latitude": lat,
-                 "longitude": lon,
-                 "zoom": zoom,
-                 "pitch": 50,}
-         )
-     )
+    st.write(
+        pdk.Deck(
+            map_style="mapbox://styles/mapbox/satellite-v9",
+            initial_view_state={
+                "latitude": lat,
+                "longitude": lon,
+                "zoom": zoom,
+                "pitch": 50,}
+        )
+    )
 
 # with row2_1:
 #     st.write(
