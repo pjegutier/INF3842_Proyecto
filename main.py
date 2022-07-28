@@ -68,21 +68,21 @@ with row1_2:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-zoom = 12    
-lat = np.average(san_juan['ns1:LatitudeDegrees4'])
-lon = np.average(san_juan['ns1:LongitudeDegrees5'])
+# zoom = 12    
+# lat = np.average(san_juan['ns1:LatitudeDegrees4'])
+# lon = np.average(san_juan['ns1:LongitudeDegrees5'])
     
-with row2_1:
-    st.write(
-        pdk.Deck(
-            map_style="mapbox://styles/mapbox/satellite-v9",
-            initial_view_state={
-                "latitude": lat,
-                "longitude": lon,
-                "zoom": zoom,
-                "pitch": 50,}
-        )
-    )
+# with row2_1:
+#     st.write(
+#         pdk.Deck(
+#             map_style="mapbox://styles/mapbox/satellite-v9",
+#             initial_view_state={
+#                 "latitude": lat,
+#                 "longitude": lon,
+#                 "zoom": zoom,
+#                 "pitch": 50,}
+#         )
+#     )
 
 # with row2_1:
 #     st.write(
