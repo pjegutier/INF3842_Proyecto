@@ -70,8 +70,8 @@ with row1_2:
      ['Green', 'Yellow', 'Red', 'Blue'],
      ['Yellow', 'Red'])
     
-    rutas = source.symbol.unique()
-    lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
+#     rutas = source.symbol.unique()
+#     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
 
     
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
