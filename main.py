@@ -107,6 +107,7 @@ with row2_1:
 #          )
 #     )
 
+# primera ruta
 with row2_2:
     line = alt.Chart(bici).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
@@ -114,7 +115,8 @@ with row2_2:
     ).properties(width=500, height=500)
     
     st.altair_chart(line)
-
+    
+# segunda ruta
 with row2_3:
     line = alt.Chart(bici).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
@@ -124,5 +126,3 @@ with row2_3:
     st.altair_chart(line)
     
 st.write(bici.head())
-
-st.write(bici[['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4']])
