@@ -72,8 +72,8 @@ with row1_2:
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 zoom = 12    
-lat = np.average(bici['ns1:LatitudeDegrees4'])
-lon = np.average(bici['ns1:LongitudeDegrees5'])
+lat = np.average(san_juan['ns1:LatitudeDegrees4'])
+lon = np.average(san_juan['ns1:LongitudeDegrees5'])
 
 with row2_1:
     st.write(
@@ -114,7 +114,7 @@ with row2_1:
 
 # primera ruta
 with row2_2:
-    line = alt.Chart(bici).mark_circle(size=60).encode(
+    line = alt.Chart(san_juan).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
     ).properties(width=500, height=500)
@@ -123,11 +123,11 @@ with row2_2:
     
 # segunda ruta
 with row2_3:
-    line = alt.Chart(bici).mark_circle(size=60).encode(
+    line = alt.Chart(san_juan).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
     ).properties(width=500, height=500)
     
     st.altair_chart(line)
     
-st.write(bici.head())
+st.write(san_juan.head())
