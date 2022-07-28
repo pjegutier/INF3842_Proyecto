@@ -54,8 +54,8 @@ with row1_1:
     
     """
     )
-hour_selected = st.multiselect(
-    'Elige tus Rutas', 'san_juan', 'buitrera')
+# hour_selected = st.multiselect(
+#     'Elige tus Rutas', 'san_juan', 'buitrera')
 
 
 options = st.multiselect(
