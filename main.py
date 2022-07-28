@@ -75,7 +75,7 @@ st.write(
             "longitude": lon,
             "zoom": zoom,
             "pitch": 50,
-         },
+         }
 #          layers=[
 #              pdk.Layer(
 #                  "HexagonLayer",
