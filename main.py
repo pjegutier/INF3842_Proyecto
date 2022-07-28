@@ -31,9 +31,7 @@ bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
-# lista de rutas
-# rutas = source.symbol.unique()
-# lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
+
 
 st.write('')
 st.write('')
@@ -62,6 +60,9 @@ with row1_2:
     El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
     """
     )
+    # lista de rutas
+    # rutas = source.symbol.unique()
+    # lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
     
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
@@ -110,7 +111,7 @@ with row2_2:
     line = alt.Chart(bici).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
-    ).properties(width=500, height=500).interactive()
+    ).properties(width=500, height=500)
     
     st.altair_chart(line)
 
@@ -118,7 +119,7 @@ with row2_3:
     line = alt.Chart(bici).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
-    ).properties(width=500, height=500).interactive()
+    ).properties(width=500, height=500)
     
     st.altair_chart(line)
     
