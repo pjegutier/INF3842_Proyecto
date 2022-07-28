@@ -76,19 +76,19 @@ st.write(
             "zoom": zoom,
             "pitch": 50,
          },
-         layers=[
-             pdk.Layer(
-                 "HexagonLayer",
-                 data=bici,
-                 get_position=["ns1:LongitudeDegrees5", "ns1:LatitudeDegrees4"],
-                 auto_highlight=True,
-                 elevation_scale=50,
-                 pickable=True,
-                 elevation_range=[0, 3000],
-                 extruded=True,
-                 coverage=1
-             ),
-         ],
+#          layers=[
+#              pdk.Layer(
+#                  "HexagonLayer",
+#                  data=bici,
+#                  get_position=["ns1:LongitudeDegrees5", "ns1:LatitudeDegrees4"],
+#                  auto_highlight=True,
+#                  elevation_scale=50,
+#                  pickable=True,
+#                  elevation_range=[0, 3000],
+#                  extruded=True,
+#                  coverage=1
+#              ),
+#          ],
     )
 )
 
