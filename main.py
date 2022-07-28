@@ -38,7 +38,7 @@ st.write('')
 st.write('')
 
 # Lay Out Superior
-row1_1, row1_2 = st.columns((3, 4))
+row1_1, row1_2 = st.columns((2, 4))
 
 with row1_1:
     st.title("🚴🏾 Rutas en Bici")
