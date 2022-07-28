@@ -69,42 +69,42 @@ zoom = 12
 lat = np.average(bici['ns1:LatitudeDegrees4'])
 lon = np.average(bici['ns1:LongitudeDegrees5'])
 
-# with row2_1:
-#     st.write(
-#         pdk.Deck(
-#             map_style="mapbox://styles/mapbox/satellite-v9",
-#             initial_view_state={
-#                 "latitude": lat,
-#                 "longitude": lon,
-#                 "zoom": zoom,
-#                 "pitch": 50,}
-#         )
-#     )
-
-with row2_1:
-    st.write(
+ with row2_1:
+     st.write(
          pdk.Deck(
              map_style="mapbox://styles/mapbox/satellite-v9",
              initial_view_state={
                  "latitude": lat,
                  "longitude": lon,
                  "zoom": zoom,
-                 "pitch": 50,
-              },
-              layers=[
-                  pdk.Layer(
-                      "HexagonLayer",
-                      data=bici,
-                      get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
-                      auto_highlight=True,
-                      elevation_scale=50,
-                      pickable=True,
-                      elevation_range=[0, 3000],
-                      extruded=True,
-                      coverage=1),
-              ],
+                 "pitch": 50,}
          )
-    )
+     )
+
+# with row2_1:
+#     st.write(
+#          pdk.Deck(
+#              map_style="mapbox://styles/mapbox/satellite-v9",
+#              initial_view_state={
+#                  "latitude": lat,
+#                  "longitude": lon,
+#                  "zoom": zoom,
+#                  "pitch": 50,
+#               },
+#               layers=[
+#                   pdk.Layer(
+#                       "HexagonLayer",
+#                       data=bici,
+#                       get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
+#                       auto_highlight=True,
+#                       elevation_scale=50,
+#                       pickable=True,
+#                       elevation_range=[0, 3000],
+#                       extruded=True,
+#                       coverage=1),
+#               ],
+#          )
+#     )
 
 with row2_2:
     line = alt.Chart(bici).mark_circle(size=60).encode(
