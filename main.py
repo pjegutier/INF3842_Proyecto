@@ -69,7 +69,7 @@ zoom = 12
 lat = np.average(bici['ns1:LatitudeDegrees4'])
 lon = np.average(bici['ns1:LongitudeDegrees5'])
 
- with row2_1:
+with row2_1:
      st.write(
          pdk.Deck(
              map_style="mapbox://styles/mapbox/satellite-v9",
