@@ -23,8 +23,8 @@ st.write('Alumnos: Luis Campos, Pablo Gutierrez')
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
-    x = 'ns1:LatitudeDegrees4:Q',
-    y = 'ns1:LongitudeDegrees5:Q'
+    x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False)),
+    y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False))
 ).properties(width=500, height=500).interactive()
 
 st.write('Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motiva.'
