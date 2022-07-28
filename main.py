@@ -54,8 +54,8 @@ with row1_1:
     
     """
     )
-#     hour_selected = st.multiselect(
-#         'Elige tus Rutas', 0, 23)
+hour_selected = st.multiselect(
+    'Elige tus Rutas', 0, 23)
     
 with row1_2:
     st.write(
