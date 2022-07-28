@@ -74,8 +74,9 @@ st.write(
             "latitude": lat,
             "longitude": lon,
             "zoom": zoom,
-            "pitch": 50
-         }
+            "pitch": 50}
+    )
+)
 #          layers=[
 #              pdk.Layer(
 #                  "HexagonLayer",
@@ -89,8 +90,7 @@ st.write(
 #                  coverage=1
 #              ),
 #          ],
-    )
-)
+
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
     x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
