@@ -67,7 +67,7 @@ with row1_2:
     # lista de rutas
     options = st.multiselect(
      'What are your favorite colors',
-     ['san_juan'], ['san_juan'])
+     ['san_juan', 'buitrera'], ['san_juan', 'buitrera'])
     
 #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
@@ -131,12 +131,15 @@ with row2_2:
     
 # segunda ruta
 with row2_3:
-    line = alt.Chart(buitrera).mark_circle(size=60).encode(
-        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
-        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
-    ).properties(width=500, height=500)
+    try:
+        line = alt.Chart(locals()[options[1]]).mark_circle(size=60).encode(
+            x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+            y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+        ).properties(width=500, height=500)
     
-    st.altair_chart(line)
+        st.altair_chart(line)
+    except:
+        None
 
 # # segunda ruta
 # with row2_4:
