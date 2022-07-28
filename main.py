@@ -62,6 +62,31 @@ with row1_2:
     """
     )
 
+lat = -70.625
+lon = -34.170
+st.write(
+    pdk.Deck(
+        map_style="mapbox://styles/mapbox/light-v9",
+        initial_view_state={
+            "latitude": lat,
+            "longitude": lon,
+            "zoom": zoom,
+            "pitch": 50,}
+#         },
+#         layers=[
+#             pdk.Layer(
+#                 "HexagonLayer",
+#                 data=data,
+#                 get_position=["lon", "lat"],
+#                 radius=100,
+#                 elevation_scale=4,
+#                 elevation_range=[0, 1000],
+#                 pickable=True,
+#                 extruded=True,
+#             ),
+#         ],
+    )
+)
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
     x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
