@@ -67,8 +67,7 @@ with row1_2:
     # lista de rutas
     options = st.multiselect(
      'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     [san_juan])
     
 #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
