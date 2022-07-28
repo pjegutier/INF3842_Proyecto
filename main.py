@@ -47,8 +47,8 @@ with row1_1:
     st.write(
         """
     ##
-    Profesora: Tamara Cucumides
-    Alumnos:   Luis Campos 
+    Profesora: Tamara Cucumides\n
+    Alumnos:   Luis Campos\n 
                Pablo Gutierrez
     """
     )
