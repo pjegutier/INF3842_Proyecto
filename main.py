@@ -72,9 +72,10 @@ with row1_2:
             
     # lista de rutas
     options = st.multiselect(
-     'Elige ruta',
-     ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
+        'Elige ruta',
+        ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
         ['san_juan'])
+    
     print(len(options))
             
 #     button = st.button("Print Locations",disabled=False)
