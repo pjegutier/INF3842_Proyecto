@@ -5,8 +5,6 @@ import subprocess
 import sys
 import pydeck as pdk
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", 'lxml'])
-
 # # funcion
 # def load_data():
 #     data = pd.read_csv(
