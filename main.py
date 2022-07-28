@@ -63,7 +63,7 @@ with row1_2:
     """
     )
     
-row2_1, row2_2 = st.columns((1, 1))
+row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 zoom = 12    
 lat = np.average(bici['ns1:LatitudeDegrees4'])
@@ -107,6 +107,14 @@ with row2_1:
 #     )
 
 with row2_2:
+    line = alt.Chart(bici).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
+    ).properties(width=500, height=500).interactive()
+    
+    st.altair_chart(line)
+
+with row2_3:
     line = alt.Chart(bici).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud'))
