@@ -67,7 +67,7 @@ with row1_2:
     # lista de rutas
     options = st.multiselect(
      'What are your favorite colors',
-     [san_juan])
+     ['san_juan'])
     
 #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
@@ -118,7 +118,7 @@ with row2_1:
 
 # primera ruta
 with row2_2:
-    line = alt.Chart(san_juan).mark_circle(size=60).encode(
+    line = alt.Chart(vars(options[0])).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
     ).properties(width=500, height=500)
