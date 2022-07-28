@@ -74,7 +74,7 @@ st.write(
             "latitude": lat,
             "longitude": lon,
             "zoom": zoom,
-            "pitch": 50,
+            "pitch": 50
          }
 #          layers=[
 #              pdk.Layer(
