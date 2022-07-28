@@ -48,8 +48,8 @@ with row1_1:
         """
     ##
     Profesora: Tamara Cucumides\n
-    Alumnos:   Luis Campos\n 
-               Pablo Gutierrez
+    Alumnos:   Luis Campos, Pablo Gutierrez 
+    
     """
     )
 #     hour_selected = st.multiselect(
