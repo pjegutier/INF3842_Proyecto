@@ -70,7 +70,16 @@ with row1_2:
      ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
         ['san_juan', 'buitrera'])
     
-#     rutas = source.symbol.unique()
+    
+    button = st.button("Print Locations",disabled=False)
+
+    if button :
+        if len(options) <= 2:
+        st.write(options)
+    else:
+        st.warning("You have to select only 2 locations")
+
+        #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
 
     
