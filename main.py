@@ -80,7 +80,9 @@ lon = np.average(bici['ns1:LongitudeDegrees5'])
 #                 "pitch": 50,}
 #         )
 #     )
-    
+
+# bici2 = bici['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4']
+
 with row2_1:
     st.write(
          pdk.Deck(
@@ -94,7 +96,7 @@ with row2_1:
               layers=[
                   pdk.Layer(
                       "HexagonLayer",
-                      data=bici['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
+                      data=bici[['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4']],
                       get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
                       radius=100,
                       elevation_scale=4,
