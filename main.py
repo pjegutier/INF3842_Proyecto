@@ -28,7 +28,7 @@ import pydeck as pdk
 # cargamos base de datos
 bici = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
 
-st.set_page_config(layout="centered", page_icon="🚲", page_title="Rutas en Bici")
+st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
 # lista de rutas
 # rutas = source.symbol.unique()
