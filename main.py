@@ -89,12 +89,14 @@ with row1_2:
         #     rutas = source.symbol.unique()
 #     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
 
-    
-    row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-    zoom = 12    
-    lat = np.average(san_juan['ns1:LatitudeDegrees4'])
-    lon = np.average(san_juan['ns1:LongitudeDegrees5'])
+row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
+
+zoom = 12    
+# lat = np.average(san_juan['ns1:LatitudeDegrees4'])
+# lon = np.average(san_juan['ns1:LongitudeDegrees5'])
+lat = np.average(buitrera['ns1:LatitudeDegrees4'])
+lon = np.average(buitrera['ns1:LongitudeDegrees5'])
 
     
 with row2_1:
