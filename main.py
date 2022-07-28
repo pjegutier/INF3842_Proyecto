@@ -28,11 +28,11 @@ import pydeck as pdk
 
 # cargamos base de datos
 san_juan = pd.read_csv('san-juan-xl.csv',sep=';',decimal=',')
-#buitrera = pd.read_csv('buitrera-lastorres.csv',sep=';',decimal=',')
-#endubaik = pd.read_csv('endubaik-leo-larga.csv',sep=';',decimal=',')
-#guindal = pd.read_csv('guindal-sausal-los-mineros.csv',sep=';',decimal=',')
-#lastorres = pd.read_csv('lastorres-pinoskytrail-xl.csv',sep=';',decimal=',')
-#pabellones = pd.read_csv('pabellones.csv',sep=';',decimal=',')
+buitrera = pd.read_csv('buitrera-lastorres.csv',sep=';',decimal=',')
+endubaik = pd.read_csv('endubaik-leo-larga.csv',sep=';',decimal=',')
+guindal = pd.read_csv('guindal-sausal-los-mineros.csv',sep=';',decimal=',')
+lastorres = pd.read_csv('lastorres-pinoskytrail-xl.csv',sep=';',decimal=',')
+pabellones = pd.read_csv('pabellones.csv',sep=';',decimal=',')
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
