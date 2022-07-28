@@ -81,8 +81,6 @@ lon = np.average(bici['ns1:LongitudeDegrees5'])
 #         )
 #     )
 
-# bici2 = bici['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4']
-
 with row2_1:
     st.write(
          pdk.Deck(
