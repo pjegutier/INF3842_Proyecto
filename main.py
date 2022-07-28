@@ -1,5 +1,6 @@
 import altair as alt
 import pandas as pd
+import numpy as np
 import streamlit as st
 import subprocess
 import sys
@@ -62,8 +63,10 @@ with row1_2:
     """
     )
 
-lat = -70.625
-lon = -34.170
+zoom = 12    
+lat = np.average(bici['ns1:LatitudeDegrees4'])
+lon = np.average(bici['ns1:LongitudeDegrees5'])
+
 st.write(
     pdk.Deck(
         map_style="mapbox://styles/mapbox/light-v9",
