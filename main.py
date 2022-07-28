@@ -123,11 +123,45 @@ with row2_2:
     
 # segunda ruta
 with row2_3:
-    line = alt.Chart(san_juan).mark_circle(size=60).encode(
+    line = alt.Chart(buitrera).mark_circle(size=60).encode(
         x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
         y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
     ).properties(width=500, height=500)
     
     st.altair_chart(line)
+
+# segunda ruta
+with row2_4:
+    line = alt.Chart(endubaik).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+    ).properties(width=500, height=500)
     
+    st.altair_chart(line)
+
+# segunda ruta
+with row2_5:
+    line = alt.Chart(guindal).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+    ).properties(width=500, height=500)
+    
+    st.altair_chart(line)
+
+with row2_6:
+    line = alt.Chart(lastorres).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+    ).properties(width=500, height=500)
+    
+    st.altair_chart(line)
+
+with row2_7:
+    line = alt.Chart(pabellones).mark_circle(size=60).encode(
+        x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+        y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+    ).properties(width=500, height=500)
+    
+    st.altair_chart(line)
+   
 st.write(san_juan.head())
