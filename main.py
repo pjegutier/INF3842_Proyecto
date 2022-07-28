@@ -55,8 +55,22 @@ with row1_1:
     """
     )
 hour_selected = st.multiselect(
-    'Elige tus Rutas', 0, 23)
-    
+    'Elige tus Rutas', 'san_juan', 'buitrera')
+
+
+options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
+
+st.write('You selected:', options)
+
+
+
+
+
+
+
 with row1_2:
     st.write(
         """
