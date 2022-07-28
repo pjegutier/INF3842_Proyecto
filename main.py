@@ -64,19 +64,19 @@ with row1_2:
     El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
     """
     )
-    def seleccion():
-        if len(options) >= 2:
-            options.disabled = True
-        else:
-            options.disabled = False            
+#     def seleccion():
+#         if len(options) >= 2:
+#             options.disabled = True
+#         else:
+#             options.disabled = False            
             
-    # lista de rutas
-    options = st.multiselect(
-        'Elige ruta',
-        ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-        ['san_juan'])
+#     # lista de rutas
+#     options = st.multiselect(
+#         'Elige ruta',
+#         ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
+#         ['san_juan'])
     
-    print(len(options))
+#     print(len(options))
             
 #     button = st.button("Print Locations",disabled=False)
 
