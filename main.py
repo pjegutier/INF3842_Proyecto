@@ -74,24 +74,22 @@ st.write(
             "latitude": lat,
             "longitude": lon,
             "zoom": zoom,
-            "pitch": 50,
-        },
+            "pitch": 50,}
+#         },
+#         layers=[
+#             pdk.Layer(
+#                 "HexagonLayer",
+#                 data=data,
+#                 get_position=["lon", "lat"],
+#                 radius=100,
+#                 elevation_scale=4,
+#                 elevation_range=[0, 1000],
+#                 pickable=True,
+#                 extruded=True,
+#             ),
+#         ],
     )
 )
-#          layers=[
-#              pdk.Layer(
-#                  "HexagonLayer",
-#                  data=bici,
-#                  get_position=["ns1:LongitudeDegrees5", "ns1:LatitudeDegrees4"],
-#                  auto_highlight=True,
-#                  elevation_scale=50,
-#                  pickable=True,
-#                  elevation_range=[0, 3000],
-#                  extruded=True,
-#                  coverage=1
-#              ),
-#          ],
-
 
 line = alt.Chart(bici).mark_circle(size=60).encode(
     x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
