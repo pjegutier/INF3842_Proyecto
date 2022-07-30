@@ -142,7 +142,7 @@ with row2_3:
 chart = alt.Chart(san_juan).mark_area().encode(
     x="dist_total:Q",
     y="a_r:Q"
-).properties(width=1000, height=500)
+).properties(width=1800, height=200)
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
