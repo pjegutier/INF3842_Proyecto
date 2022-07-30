@@ -137,12 +137,13 @@ with row2_3:
     except:
         None
 
-        
+st.write("")
+st.write("")
 # crear gráfico con altair
 chart = alt.Chart(san_juan).mark_area().encode(
     x="dist_total:Q",
     y="a_r:Q"
-).properties(width=1800, height=200)
+).properties(width=1800, height=200).interative()
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
