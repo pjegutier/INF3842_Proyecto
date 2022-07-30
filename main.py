@@ -17,6 +17,11 @@ pabellones = pd.read_csv('pabellones.csv',sep=',',decimal='.')
 
 # Calculamos distancia acumulada
 san_juan['dist_total'] = san_juan['d_r'].cumsum()
+buitrera['dist_total'] = buitrera['d_r'].cumsum()
+endubaik['dist_total'] = endubaik['d_r'].cumsum()
+guindal['dist_total'] = guindal['d_r'].cumsum()
+lastorres['dist_total'] = lastorres['d_r'].cumsum()
+pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
@@ -34,8 +39,10 @@ with row1_2:
     st.write(
         """
     ##
-    Se escoge un dataset de página wikiloc (https://es.wikiloc.com/) debido a que buscamos un tema de visualización que nos motiva.
-    El dataset tiene atributos como altitud, longitud, latitud, velocidad, distancia, variables que permiten analizar una ruta desde multiples formas de visualización.
+    Hola biker de Machalí, escoge 2 rutas de tu interés para ver su ubicación, altura comparativa 
+    
+    
+    .
     """
     )
     def seleccion():
@@ -129,8 +136,17 @@ with row2_3:
         st.altair_chart(line)
     except:
         None
-   
-st.write(san_juan.head())
+
+        
+# crear gráfico con altair
+chart = alt.Chart(san_juan).mark_area().encode(
+    x="dis_total",
+    y="a_r"
+)
+# mostrar gráfico de altair
+chart
+        
+# st.write(san_juan.head())
 st.write(   
     """
     ##
