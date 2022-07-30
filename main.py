@@ -14,6 +14,11 @@ guindal = pd.read_csv('guindal-sausal-los-mineros.csv',sep=',',decimal='.')
 lastorres = pd.read_csv('lastorres-pinoskytrail-xl.csv',sep=',',decimal='.')
 pabellones = pd.read_csv('pabellones.csv',sep=',',decimal='.')
 
+
+# Calculamos distancia acumulada
+san_juan['dist_total'] = san_juan['d_r'].cumsum()
+
+
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
 st.write('')
