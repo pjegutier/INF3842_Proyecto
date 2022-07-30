@@ -126,11 +126,11 @@ with row2_3:
         None
    
 st.write(san_juan.head())
-st.write('   
+st.write(   
     """
     ##
     Profesora: Tamara Cucumides\n
     Alumnos:   Luis Campos, Pablo Gutierrez 
     
     """
-        ')
+)
