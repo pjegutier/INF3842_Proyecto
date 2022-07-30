@@ -138,16 +138,13 @@ with row2_3:
         None
 
         
-row3_1 = st.columns((1))
-
-with row3_1:        
-    # crear gráfico con altair
-    chart = alt.Chart(san_juan).mark_area().encode(
-        x="dis_total:Q",
-        y="a_r:Q"
-    )
-    # mostrar gráfico de altair
-    chart
+# crear gráfico con altair
+chart = alt.Chart(san_juan).mark_area().encode(
+    x="dis_total:Q",
+    y="a_r:Q"
+)
+# mostrar gráfico de altair
+st.altair_chart(chart)
         
 # st.write(san_juan.head())
 st.write(   
