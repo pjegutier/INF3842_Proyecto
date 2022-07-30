@@ -5,7 +5,7 @@ import streamlit as st
 import subprocess
 import sys
 import pydeck as pdk
-#from vega_datasets import data
+
 
 
 # cargamos base de datos
@@ -143,7 +143,7 @@ st.write("")
 st.write("")
 
 
-alt.Chart(san_juan).mark_area(opacity=0.3).encode(
+chart = alt.Chart(san_juan).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color="source:N"
