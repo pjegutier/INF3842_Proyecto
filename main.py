@@ -5,7 +5,7 @@ import streamlit as st
 import subprocess
 import sys
 import pydeck as pdk
-from vega_datasets import data
+#from vega_datasets import data
 
 
 # cargamos base de datos
