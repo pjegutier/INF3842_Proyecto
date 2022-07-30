@@ -24,14 +24,6 @@ row1_1, row1_2 = st.columns((1, 2))
 
 with row1_1:
     st.title("🚴🏾 Rutas en Bici")
-    st.write(
-        """
-    ##
-    Profesora: Tamara Cucumides\n
-    Alumnos:   Luis Campos, Pablo Gutierrez 
-    
-    """
-    )
 
 with row1_2:
     st.write(
@@ -84,9 +76,6 @@ with row2_1:
         )
     )
 
-st.write('test')
-    
-    
 # with row2_1:
 #     st.write(
 #          pdk.Deck(
@@ -137,3 +126,11 @@ with row2_3:
         None
    
 st.write(san_juan.head())
+st.write('   
+    """
+    ##
+    Profesora: Tamara Cucumides\n
+    Alumnos:   Luis Campos, Pablo Gutierrez 
+    
+    """
+        )
