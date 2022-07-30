@@ -140,7 +140,7 @@ with row2_3:
         
 # crear gráfico con altair
 chart = alt.Chart(san_juan).mark_area().encode(
-    x="dis_total:Q",
+    x="dist_total:Q"
     y="a_r:Q"
 )
 # mostrar gráfico de altair
