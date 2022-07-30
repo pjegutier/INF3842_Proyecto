@@ -84,6 +84,9 @@ with row2_1:
         )
     )
 
+st.write('test')
+    
+    
 # with row2_1:
 #     st.write(
 #          pdk.Deck(
