@@ -56,9 +56,9 @@ with row1_2:
             
     # lista de rutas
     options = st.multiselect(
-        'Elige ruta',
+        'Elige entre 2 rutas para compararlas',
         df['ns1:Name'].unique(), 
-        df['ns1:Name'].unique()[:2])
+        df['ns1:Name'].unique()[:2], disabled = True)
     
             
 #     button = st.button("Print Locations",disabled=False)
