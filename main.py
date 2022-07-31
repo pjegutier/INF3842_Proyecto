@@ -57,8 +57,7 @@ with row1_2:
         df['ns1:Name'].unique()[:2])
     
     if len(options) > 2:
-        options = st.multiselect('Ha elegido más de 2 rutas, elija nuevamente',
-                                 df['ns1:Name'].unique())
+        st.write('Ha elegido más de 2 rutas, elija nuevamente, elimine selecciones')
     
             
 #     button = st.button("Print Locations",disabled=False)
