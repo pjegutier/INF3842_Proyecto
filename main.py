@@ -158,6 +158,7 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
     color= "ruta:N"
 ).properties(width=1400, height=200).add_selection(selection)
 
+st.write(df[options])
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
