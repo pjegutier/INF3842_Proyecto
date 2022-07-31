@@ -74,10 +74,10 @@ with row1_2:
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 zoom = 12    
-lat = np.average(np.average(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']),
-                 np.average(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))
-lon = np.average(np.average(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']),
-                 np.average(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))
+lat = np.mean(np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']),
+              np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))
+lon = np.mean(np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']),
+              np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))
     
 with row2_1:
     st.write(
