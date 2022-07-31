@@ -80,7 +80,7 @@ with row2_1:
         longitude = lon,
         latitude = lat,
         zoom = zoom,
-        min_zoom=5,
+        min_zoom=10,
         max_zoom=15,
         pitch = 50)
     
