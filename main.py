@@ -173,7 +173,7 @@ chart = alt.Chart(datos_sel).mark_area().encode(
     opacity=alt.condition(selection, alt.value(1.0), alt.value(0.3)) 
 ).properties(width=1300, height=200).add_selection(selection)
 
-mostrar gráfico de altair
+#mostrar gráfico de altair
 st.altair_chart(chart)
 
 st.write(   
