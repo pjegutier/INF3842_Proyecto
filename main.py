@@ -174,6 +174,7 @@ elif len(options) == 1:
 else: 
     datos_sel = df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
     
+st.write("Puedes Seleccionar en la Legenda para ver en específico el gráfico")
 
 selection = alt.selection_multi(fields=['ns1:Name'], bind='legend')
 
