@@ -98,7 +98,7 @@ with row2_1:
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
-    get_fill_color=[290, 187, 105, 1],
+    get_fill_color=[290, 187, 105, 100],
     pickable=True)
     
 #     if len(options) == 1:
