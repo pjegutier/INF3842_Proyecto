@@ -137,7 +137,7 @@ with row2_1:
         get_fill_color=[290, 187, 105, 140],
         pickable=True)
 
-    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1,layer2], initial_view_state=view_state)
+    r = pdk.Deck( layers=[layer1,layer2], initial_view_state=view_state)
     st.write(r)
 
 
