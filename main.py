@@ -102,8 +102,8 @@ with row2_1:
         elevation_range=[0, 3000],
         extruded=True,
         coverage=1)
- #   r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers = [layer], initial_view = viewstate)
-    r = pdk.Deck(layers = [layer], initial_view = viewstate)
+    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
+ #   r = pdk.Deck(layers = [layer], initial_view = viewstate)
     st.write(r)
         
 
