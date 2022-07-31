@@ -25,14 +25,6 @@ guindal['dist_total'] = guindal['d_r'].cumsum()
 lastorres['dist_total'] = lastorres['d_r'].cumsum()
 pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
-# Agregamos nombre de ruta
-san_juan['ruta'] = "san_juan"
-buitrera['ruta'] = "buitrera"
-endubaik['ruta'] = "endubaik"
-guindal['ruta'] = "guindal"
-lastorres['ruta'] = "lastorres"
-pabellones['ruta'] = "pabellones"
-
 df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
@@ -65,8 +57,8 @@ with row1_2:
     # lista de rutas
     options = st.multiselect(
         'Elige ruta',
-        df['ruta'].unique(), 
-        df['ruta'].unique()[:2])
+        df['ns1:Name'].unique(), 
+        df['ns1:Name'].unique()[:2])
     
             
 #     button = st.button("Print Locations",disabled=False)
@@ -162,7 +154,7 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-df.loc[df['ruta'] == options[0]]
+df.loc[df['ns1:Name'] == options[0]]
 
 
         
