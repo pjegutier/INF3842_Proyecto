@@ -146,13 +146,13 @@ st.write("")
 chart1 = alt.Chart(san_juan).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
-    color="dist_total"
+    #color="dist_total"
 ).properties(width=1800, height=200)
 
 chart2 = alt.Chart(buitrera).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
-    color="dist_total"
+    #color="dist_total"
 ).properties(width=1800, height=200)
 
 
