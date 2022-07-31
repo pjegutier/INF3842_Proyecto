@@ -143,7 +143,7 @@ st.write("")
 st.write("")
 
 
-st.write(len(option))
+st.write(len(options))
 
 #df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
 
