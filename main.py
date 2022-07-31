@@ -27,8 +27,6 @@ pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
 df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
-st.write(df.head())
-
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
 st.write('')
@@ -119,8 +117,6 @@ with row2_1:
 #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
 #     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
 #     st.write(r)
-    
-    st.write(df.head())
 
 
 # primera ruta
@@ -179,3 +175,5 @@ st.write(
     
     """
 )
+
+st.write(df2.head())
