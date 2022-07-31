@@ -73,9 +73,17 @@ with row1_2:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-zoom = 12    
-lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
-lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5'])
+zoom = 12 
+
+if len(options) == 0:
+    lat = -34.18082 #machali
+    lon = -70.64933 #machali
+if len(options) == 1:
+    lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
+    lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5'])    
+else:
+    lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))/2
+    lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))/2
     
 with row2_1:
     st.write(
