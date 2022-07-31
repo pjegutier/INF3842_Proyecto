@@ -42,10 +42,7 @@ with row1_2:
     st.write(
         """
     ##
-    Hola biker de Machalí, escoge 2 rutas de tu interés para ver su ubicación, altura comparativa 
-    
-    
-    .
+    Hola biker de Machalí, la mejor ciudad de Chile, escoge 2 rutas de tu interés para disfrutar. Podrás comparar su ubicación y altura para encontrar tu próximo desafío. Atrévete!    
     """
     )
    
@@ -59,17 +56,6 @@ with row1_2:
     if len(options) > 2:
         st.write('Ha elegido más de 2 rutas, elija nuevamente, elimine selecciones')
     
-            
-#     button = st.button("Print Locations",disabled=False)
-
-#     if button :
-#         if len(options) <= 2:
-#         st.write(options)
-#     else:
-#         st.warning("You have to select only 2 locations")
-
-#     rutas = source.symbol.unique()
-#     lista_rutas = st.multiselect("Choose stocks to visualize", all_symbols, all_symbols[:3])
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
