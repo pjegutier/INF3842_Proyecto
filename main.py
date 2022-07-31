@@ -60,7 +60,7 @@ with row1_2:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-zoom = 12 
+zoom = 6 
 
 if len(options) == 1:
     lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
@@ -91,13 +91,17 @@ with row2_1:
         longitude = lon,
         latitude = lat,
         zoom = zoom,
-        pitch = 50
-
-    )
+        min_zoom=5,
+        max_zoom=15,
+        pitch = 40.5,
+        bearing=-27.36)
+    
+    df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lon', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+    
     layer = pdk.Layer(
         "HexagonLayer",
-        data=df,
-        get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
+        data= df2,
+        get_position=['lon', 'lat'],
         auto_highlight=True,
         elevation_scale=50,
         pickable=True,
