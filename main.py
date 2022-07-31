@@ -87,8 +87,8 @@ else:
 
 with row2_1:
     viewstate = pdk.ViewState(
-        "longitude": lon,
-        "latitude": lat,
+        longitude = lon,
+        latitude = lat,
         "zoom": zoom,
         "pitch": 50
     )
