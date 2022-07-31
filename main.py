@@ -95,7 +95,7 @@ with row2_1:
     df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lon', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
     
     layer = pdk.Layer(
-        "HexagonLayer",
+        'ScatterplotLayer',
         df2,
         get_position=['lon', 'lat'],
         auto_highlight=True,
