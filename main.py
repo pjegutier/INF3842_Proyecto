@@ -160,6 +160,8 @@ chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
+
+st.write(selection)
         
 # st.write(san_juan.head())
 st.write(   
