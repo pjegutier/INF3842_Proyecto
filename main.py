@@ -106,7 +106,7 @@ with row2_1:
 #    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
     #r = pdk.Deck(initial_view = viewstate)
     #st.write(r)
-    st.write(print("my_print",lon, lat))        
+st.write(print("my_print",lon, lat))        
 
 # primera ruta
 with row2_2:
