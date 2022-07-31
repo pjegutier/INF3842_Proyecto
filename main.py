@@ -64,24 +64,27 @@ zoom = 12
 if len(options) == 1:
     lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['lt'])
     lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['lng'])    
-elif len(options) == 2:
+elif len(options) >= 2:
     lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lt']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lt']))/2
     lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lng']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lng']))/2
     
 else:
     lat = -34.18082 #machali
     lon = -70.64933 #machali
+
+# lat = round(lat,5)
+# lon = round(lon,5)
     
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 with row2_1:
     
-    st.write(round(lat,4),round(lon,4))
+    st.write(lat,lon)
     
     view_state = pdk.ViewState(
-        longitude = round(lat,5),
-        latitude = round(lon,5),
+        longitude = lon,
+        latitude = lat,
         zoom = zoom,
         pitch = 50)
      
