@@ -89,7 +89,7 @@ with row2_1:
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
-    get_fill_color='blue',
+    get_fill_color=[180, 0, 200, 140],
     pickable=True)
     
     layer2 = pdk.Layer(
@@ -98,8 +98,21 @@ with row2_1:
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
-    get_fill_color='gold',
+    get_fill_color=[290, 187, 105, 1],
     pickable=True)
+    
+#     if len(options) == 1:
+#         lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['lt'])
+#         lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['lng'])    
+#     elif len(options) == 2:
+#         lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lt']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lt']))/2
+#         lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lng']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lng']))/2
+    
+# else:
+#     lat = -34.18082 #machali
+#     lon = -70.64933 #machali
+    
+#     if 
     
     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1,layer2], initial_view_state=view_state)
     st.write(r)
