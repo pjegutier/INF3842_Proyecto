@@ -156,13 +156,13 @@ chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
-    opacity=alt.condition(options, alt.value(1.0), alt.value(0.0)) 
-).properties(width=1300, height=200).add_selection(options)
+    opacity=alt.condition(selection, alt.value(1.0), alt.value(0.0)) 
+).properties(width=1300, height=200).add_selection(selection)
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-st.write(print(selection))
+datos_sel.head()
         
 # st.write(san_juan.head())
 st.write(   
