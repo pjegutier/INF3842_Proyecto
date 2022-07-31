@@ -94,14 +94,14 @@ with row2_1:
     
     layer2 = pdk.Layer(
         'ScatterplotLayer',
-    df[['lng','lt']],
+    df.loc[df['ns1:Name'] == options[1]][['lng','lt']],
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
     get_fill_color='[120, 0, 200, 140]',
     pickable=True)
     
-    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1], initial_view_state=view_state)
+    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1,layer2], initial_view_state=view_state)
     st.write(r)
 
 
