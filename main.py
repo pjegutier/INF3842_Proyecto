@@ -86,11 +86,11 @@ else:
 #     )        
 
 with row2_1:
-    viewstate = pdk.ViewState(
-        longitude = -70.64933,
-        latitude = -34.18082,
-        zoom = zoom,
-        pitch = 50)
+#     viewstate = pdk.ViewState(
+#         longitude = -70.64933,
+#         latitude = -34.18082,
+#         zoom = zoom,
+#         pitch = 50)
     
     df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
     
@@ -105,14 +105,14 @@ with row2_1:
 #         extruded=True,
 #         coverage=1)
     
-    layer = pdk.Layer(
-        'ScatterplotLayer',
-    df2,
-    get_position=['lng', 'lat'],
-    auto_highlight=True,
-    get_radius=1000,
-    get_fill_color='[180, 0, 200, 140]',
-    pickable=True)
+#     layer = pdk.Layer(
+#         'ScatterplotLayer',
+#     df2,
+#     get_position=['lng', 'lat'],
+#     auto_highlight=True,
+#     get_radius=1000,
+#     get_fill_color='[180, 0, 200, 140]',
+#     pickable=True)
     
 #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
 #     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
