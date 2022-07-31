@@ -90,39 +90,38 @@ row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 
 with row2_1:
-    st.write(df[['lng','lt']])
     
-#     view_state = pdk.ViewState(
-#         longitude = -70.64933,
-#         latitude = -34.18082,
-#         zoom = zoom,
-#         pitch = 50)
-    
+    view_state = pdk.ViewState(
+        longitude = -70.64933,
+        latitude = -34.18082,
+        zoom = zoom,
+        pitch = 50)
     
     
-# #     layer = pdk.Layer(
-# #         'HexagonLayer',
-# #         df,
-# #         get_position=['lng', 'lt'],
-# #         auto_highlight=True,
-# #         elevation_scale=50,
-# #         pickable=True,
-# #         elevation_range=[0, 3000],
-# #         extruded=True,
-# #         coverage=1)
     
 #     layer = pdk.Layer(
-#         'ScatterplotLayer',
-#     df,
-#     get_position=['lng', 'lt'],
-#     auto_highlight=True,
-#     get_radius=1000,
-#     get_fill_color='[180, 0, 200, 140]',
-#     pickable=True)
+#         'HexagonLayer',
+#         df,
+#         get_position=['lng', 'lt'],
+#         auto_highlight=True,
+#         elevation_scale=50,
+#         pickable=True,
+#         elevation_range=[0, 3000],
+#         extruded=True,
+#         coverage=1)
     
-# #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
-#     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
-#     st.write(r)
+    layer = pdk.Layer(
+        'ScatterplotLayer',
+    df[['lng','lt']],
+    get_position=['lng', 'lt'],
+    auto_highlight=True,
+    get_radius=1000,
+    get_fill_color='[180, 0, 200, 140]',
+    pickable=True)
+    
+#     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
+    r = pdk.Deck(layers=[layer], initial_view_state=view_state)
+    st.write(r)
 
 
 # primera ruta
