@@ -118,7 +118,7 @@ with row2_1:
 #     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
 #     st.write(r)
     
-    st.write(df2.head())
+    df2.head()
 
 
 # primera ruta
