@@ -118,7 +118,7 @@ with row2_1:
 # primera ruta
 with row2_2:
     try:
-        line = alt.Chart(locals()[options[0]]).mark_circle(size=60).encode(
+        line = alt.Chart(df.loc[df['ns1:Name'] == options[0]]).mark_circle(size=60).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
             y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
         ).properties(width=500, height=500)
@@ -130,7 +130,7 @@ with row2_2:
 # segunda ruta
 with row2_3:
     try:
-        line = alt.Chart(locals()[options[1]]).mark_circle(size=60).encode(
+        line = alt.Chart(df.loc[df['ns1:Name'] == options[1]]).mark_circle(size=60).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
             y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
         ).properties(width=500, height=500)
@@ -154,7 +154,8 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-df.loc[df['ns1:Name'] == options[0:2]]
+df.loc[[df['ns1:Name'] == options[0],
+       df['ns1:Name'] == options[1]]]
 
 
         
