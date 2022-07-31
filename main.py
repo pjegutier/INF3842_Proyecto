@@ -150,7 +150,7 @@ else:
     datos_sel = df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
     
 
-selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
+selection = alt.selection_multi(fields=['ns1:Name'], bind='legend')
 
 chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
@@ -162,9 +162,6 @@ chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-st.write(datos_sel.head())
-        
-# st.write(san_juan.head())
 st.write(   
     """
     ##
