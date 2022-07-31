@@ -92,7 +92,7 @@ with row2_1:
     get_fill_color='[180, 0, 200, 140]',
     pickable=True)
     
-    layer1 = pdk.Layer(
+    layer2 = pdk.Layer(
         'ScatterplotLayer',
     df[['lng','lt']],
     get_position=['lng', 'lt'],
@@ -101,7 +101,7 @@ with row2_1:
     get_fill_color='[120, 0, 200, 140]',
     pickable=True)
     
-    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1,layer2], initial_view_state=view_state)
+    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1], initial_view_state=view_state)
     st.write(r)
 
 
