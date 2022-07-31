@@ -150,12 +150,13 @@ with row2_3:
 st.write("")
 st.write("")
 
+selection = alt.selection_multi(fields=['ruta'], bind='legend')
 
 chart = alt.Chart(df).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ruta:N"
-).properties(width=1800, height=200).add_selection(options)
+).properties(width=1800, height=200).add_selection(selection)
 
 
 # mostrar gráfico de altair
