@@ -74,8 +74,8 @@ with row1_2:
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 zoom = 12    
-lat = np.average(san_juan['ns1:LatitudeDegrees4'])
-lon = np.average(san_juan['ns1:LongitudeDegrees5'])
+lat = np.average(np.average(df.loc[df['ns1:LatitudeDegrees4'] == options[0]]),np.average(df.loc[df['ns1:LatitudeDegrees4'] == options[1]]))
+lon = np.average(np.average(df.loc[df['ns1:LongitudeDegrees5'] == options[0]]),np.average(df.loc[df['ns1:LongitudeDegrees5'] == options[1]])) 
     
 with row2_1:
     st.write(
