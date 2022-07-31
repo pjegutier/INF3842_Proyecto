@@ -84,7 +84,7 @@ else:
 #                 "pitch": 50,}
 #         )
 #     )
-st.write(print("my_print",lon, lat))        
+st.write(lon, lat)        
 
 with row2_1:
     viewstate = pdk.ViewState(
