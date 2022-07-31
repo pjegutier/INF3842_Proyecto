@@ -85,35 +85,35 @@ with row2_1:
     
     if len(options) == 1:
         layer1 = pdk.Layer(
-        'ScatterplotLayer',
-        df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
-        get_position=['lng', 'lt'],
-        auto_highlight=True,
-        get_radius=50,
-        get_fill_color=[132, 157, 204, 140],
-        pickable=True)
+            'ScatterplotLayer',
+            df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
+            get_position=['lng', 'lt'],
+            auto_highlight=True,
+            get_radius=50,
+            get_fill_color=[132, 157, 204, 140],
+            pickable=True)
         
         r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1], initial_view_state=view_state)
         
         
     elif len(options) >= 2:
         layer1 = pdk.Layer(
-        'ScatterplotLayer',
-        df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
-        get_position=['lng', 'lt'],
-        auto_highlight=True,
-        get_radius=50,
-        get_fill_color=[132, 157, 204, 140],
-        pickable=True)
+            'ScatterplotLayer',
+            df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
+            get_position=['lng', 'lt'],
+            auto_highlight=True,
+            get_radius=50,
+            get_fill_color=[132, 157, 204, 140],
+            pickable=True)
         
         layer2 = pdk.Layer(
-        'ScatterplotLayer',
-        df.loc[df['ns1:Name'] == options[1]][['lng','lt']],
-        get_position=['lng', 'lt'],
-        auto_highlight=True,
-        get_radius=50,
-        get_fill_color=[290, 187, 105, 140],
-        pickable=True)
+            'ScatterplotLayer',
+            df.loc[df['ns1:Name'] == options[1]][['lng','lt']],
+            get_position=['lng', 'lt'],
+            auto_highlight=True,
+            get_radius=50,
+            get_fill_color=[290, 187, 105, 140],
+            pickable=True)
         
         r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer1,layer2], initial_view_state=view_state)
     
