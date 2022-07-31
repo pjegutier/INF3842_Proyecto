@@ -60,6 +60,8 @@ with row1_2:
         df['ns1:Name'].unique(), 
         df['ns1:Name'].unique()[:2], disabled = True)
     
+    st.write(options.keys())
+    
             
 #     button = st.button("Print Locations",disabled=False)
 
