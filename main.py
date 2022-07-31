@@ -89,8 +89,8 @@ with row2_1:
     viewstate = pdk.ViewState(
         longitude = lon,
         latitude = lat,
-        "zoom": zoom,
-        "pitch": 50
+        zoom = zoom,
+        pitch = 50
     )
     layer = pdk.Layer(
         "HexagonLayer",
