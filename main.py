@@ -154,8 +154,7 @@ chart = alt.Chart(df).mark_area().encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-pd.concat([df.loc[df['ns1:Name'] == options[0]],
-           df.loc[df['ns1:Name'] == options[1]]], ignore_index = True).head()
+df.loc[(df['ns1:Name'] == options[0]) or (df['ns1:Name'] == options[1])]
         
 # st.write(san_juan.head())
 st.write(   
