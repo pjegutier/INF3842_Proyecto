@@ -113,10 +113,10 @@ with row2_1:
 # primera ruta
 with row2_2:
     try:
-        line = alt.Chart(df.loc[df['ns1:Name'] == options[0]]).mark_circle(size=60).encode(
+        line = alt.Chart(df.loc[df['ns1:Name'] == options[0]]).mark_circle(size=30).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
             y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
-        ).properties(width=300, height=500)
+        ).properties(width=400, height=500)
 
         st.altair_chart(line)
     except:
@@ -125,10 +125,11 @@ with row2_2:
 # segunda ruta
 with row2_3:
     try:
-        line = alt.Chart(df.loc[df['ns1:Name'] == options[1]]).mark_circle(size=60).encode(
+        line = alt.Chart(df.loc[df['ns1:Name'] == options[1]]).mark_circle(size=30).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
-            y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
-        ).properties(width=300, height=500)
+            y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud')),
+            color = alt.value("orange")
+        ).properties(width=400, height=500)
     
         st.altair_chart(line)
     except:
