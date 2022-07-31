@@ -36,7 +36,7 @@ st.write('')
 row1_1, row1_2 = st.columns((1, 2))
 
 with row1_1:
-    st.title("🚴🏾 Rutas en Bici")
+    st.title("🚴🏾 Rutas en Bici - Machali")
 
 with row1_2:
     st.write(
@@ -72,42 +72,42 @@ else:
     lat = -34.18082 #machali
     lon = -70.64933 #machali
     
-with row2_1:
-    st.write(
-        pdk.Deck(
-            map_style="mapbox://styles/mapbox/satellite-v9",
-            initial_view_state={
-                "latitude": lat,
-                "longitude": lon,
-                "zoom": zoom,
-                "pitch": 50,}
-        )
-    )
-
 # with row2_1:
 #     st.write(
-#          pdk.Deck(
-#              map_style="mapbox://styles/mapbox/satellite-v9",
-#              initial_view_state={
-#                  "latitude": lat,
-#                  "longitude": lon,
-#                  "zoom": zoom,
-#                  "pitch": 50,
-#               },
-#               layers=[
-#                   pdk.Layer(
-#                       "HexagonLayer",
-#                       data=bici,
-#                       get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
-#                       auto_highlight=True,
-#                       elevation_scale=50,
-#                       pickable=True,
-#                       elevation_range=[0, 3000],
-#                       extruded=True,
-#                       coverage=1),
-#               ],
-#          )
+#         pdk.Deck(
+#             map_style="mapbox://styles/mapbox/satellite-v9",
+#             initial_view_state={
+#                 "latitude": lat,
+#                 "longitude": lon,
+#                 "zoom": zoom,
+#                 "pitch": 50,}
+#         )
 #     )
+
+with row2_1:
+    st.write(
+         pdk.Deck(
+             map_style="mapbox://styles/mapbox/satellite-v9",
+             initial_view_state={
+                 "latitude": lat,
+                 "longitude": lon,
+                 "zoom": zoom,
+                 "pitch": 50,
+              },
+              layers=[
+                  pdk.Layer(
+                      "HexagonLayer",
+                      data=df,
+                      get_position=['ns1:LongitudeDegrees5', 'ns1:LatitudeDegrees4'],
+                      auto_highlight=True,
+                      elevation_scale=50,
+                      pickable=True,
+                      elevation_range=[0, 3000],
+                      extruded=True,
+                      coverage=1),
+              ],
+         )
+    )
 
 # primera ruta
 with row2_2:
