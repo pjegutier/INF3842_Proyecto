@@ -168,15 +168,15 @@ chart = alt.Chart(datos_sel).mark_area().encode(
 ).properties(width=1300, height=200).add_selection(selection)
 
 # mostrar gráfico de altair
-st.altair_chart(chart)
+# st.altair_chart(chart)
 
-st.write(   
-    """
-    ##
-    Profesora: Tamara Cucumides\n
-    Alumnos:   Luis Campos, Pablo Gutierrez 
+# st.write(   
+#     """
+#     ##
+#     Profesora: Tamara Cucumides\n
+#     Alumnos:   Luis Campos, Pablo Gutierrez 
     
-    """
-)
+#     """
+# )
 
 st.write(df2.head())
