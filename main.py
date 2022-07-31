@@ -89,7 +89,7 @@ with row2_1:
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
-    get_fill_color=[180, 0, 200, 140],
+    get_fill_color=[132, 157, 204, 140],
     pickable=True)
     
     layer2 = pdk.Layer(
@@ -98,7 +98,7 @@ with row2_1:
     get_position=['lng', 'lt'],
     auto_highlight=True,
     get_radius=50,
-    get_fill_color=[290, 187, 105, 100],
+    get_fill_color=[290, 187, 105, 140],
     pickable=True)
     
 #     if len(options) == 1:
