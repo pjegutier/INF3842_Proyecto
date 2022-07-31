@@ -73,41 +73,40 @@ else:
     lat = -34.18082 #machali
     lon = -70.64933 #machali
     
-# with row2_1:
-#     st.write(
-#         pdk.Deck(
-#             map_style="mapbox://styles/mapbox/satellite-v9",
-#             initial_view_state={
-#                 "latitude": lat,
-#                 "longitude": lon,
-#                 "zoom": zoom,
-#                 "pitch": 50,}
-#         )
-#     )
-st.write(lon, lat)        
-
 with row2_1:
-    viewstate = pdk.ViewState(
-        longitude = lon,
-        latitude = lat,
-        zoom = zoom,
-        min_zoom=5,
-        max_zoom=15,
-        pitch = 40.5,
-        bearing=-27.36)
+    st.write(
+        pdk.Deck(
+            map_style="mapbox://styles/mapbox/satellite-v9",
+            initial_view_state={
+                "latitude": lat,
+                "longitude": lon,
+                "zoom": zoom,
+                "pitch": 50,}
+        )
+    )        
+
+# with row2_1:
+#     viewstate = pdk.ViewState(
+#         longitude = lon,
+#         latitude = lat,
+#         zoom = zoom,
+#         min_zoom=5,
+#         max_zoom=15,
+#         pitch = 40.5,
+#         bearing=-27.36)
     
-    df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lon', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+#     df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lon', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
     
-    layer = pdk.Layer(
-        "HexagonLayer",
-        data= df2,
-        get_position=['lon', 'lat'],
-        auto_highlight=True,
-        elevation_scale=50,
-        pickable=True,
-        elevation_range=[0, 3000],
-        extruded=True,
-        coverage=1)
+#     layer = pdk.Layer(
+#         "HexagonLayer",
+#         data= df2,
+#         get_position=['lon', 'lat'],
+#         auto_highlight=True,
+#         elevation_scale=50,
+#         pickable=True,
+#         elevation_range=[0, 3000],
+#         extruded=True,
+#         coverage=1)
 #    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
     #r = pdk.Deck(initial_view = viewstate)
     #st.write(r)
