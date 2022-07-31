@@ -42,7 +42,8 @@ with row1_2:
     st.write(
         """
     ##
-    Hola biker de Machalí, la mejor ciudad de Chile, escoge 2 rutas de tu interés para disfrutar. Podrás comparar su ubicación y altura para encontrar tu próximo desafío. Atrévete!    
+    Hola biker de Machalí, la mejor ciudad de Chile, escoge 2 rutas de tu interés para disfrutar. Podrás comparar su ubicación y altura para evaluar
+    la dificultad técnica y encontrar tu próximo desafío. Atrévete te te!    
     """
     )
    
@@ -115,7 +116,7 @@ with row2_2:
         line = alt.Chart(df.loc[df['ns1:Name'] == options[0]]).mark_circle(size=60).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
             y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
-        ).properties(width=500, height=500)
+        ).properties(width=300, height=500)
 
         st.altair_chart(line)
     except:
@@ -127,7 +128,7 @@ with row2_3:
         line = alt.Chart(df.loc[df['ns1:Name'] == options[1]]).mark_circle(size=60).encode(
             x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
             y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
-        ).properties(width=500, height=500)
+        ).properties(width=300, height=500)
     
         st.altair_chart(line)
     except:
