@@ -33,7 +33,7 @@ guindal['ruta'] = "guindal"
 lastorres['ruta'] = "lastorres"
 pabellones['ruta'] = "pabellones"
 
-df = pd.concat([san_juan, buitreta, endubaik, guindal, lastorres, pabellones], ignore_index = True)
+df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
