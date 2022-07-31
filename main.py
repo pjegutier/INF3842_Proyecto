@@ -87,25 +87,35 @@ else:
 
 with row2_1:
     viewstate = pdk.ViewState(
-        longitude = lon,
-        latitude = lat,
+        longitude = -70.64933,
+        latitude = -34.18082,
         zoom = zoom,
         pitch = 50)
     
-    df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lon', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+    df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+    
+#     layer = pdk.Layer(
+#         'HexagonLayer',
+#         df2,
+#         get_position=['lon', 'lat'],
+#         auto_highlight=True,
+#         elevation_scale=50,
+#         pickable=True,
+#         elevation_range=[0, 3000],
+#         extruded=True,
+#         coverage=1)
     
     layer = pdk.Layer(
         'ScatterplotLayer',
-        df2,
-        get_position=['lon', 'lat'],
-        auto_highlight=True,
-        elevation_scale=50,
-        pickable=True,
-        elevation_range=[0, 3000],
-        extruded=True,
-        coverage=1)
-    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
-#     r = pdk.Deck(initial_view = viewstate)
+    UK_ACCIDENTS_DATA,
+    get_position=['lng', 'lat'],
+    auto_highlight=True,
+    get_radius=1000,
+    get_fill_color='[180, 0, 200, 140]',
+    pickable=True)
+    
+#     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
+    r = pdk.Deck(layers=[layer], initial_view_state=view_state)
     st.write(r)
 
 
