@@ -25,6 +25,15 @@ guindal['dist_total'] = guindal['d_r'].cumsum()
 lastorres['dist_total'] = lastorres['d_r'].cumsum()
 pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
+# Agregamos nombre de ruta
+san_juan['ruta'] = "san_juan"
+buitrera['ruta'] = "buitrera"
+endubaik['ruta'] = "endubaik"
+guindal['ruta'] = "guindal"
+lastorres['ruta'] = "lastorres"
+pabellones['ruta'] = "pabellones"
+
+df = pd.concat([san_juan, buitreta, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
@@ -56,10 +65,9 @@ with row1_2:
     # lista de rutas
     options = st.multiselect(
         'Elige ruta',
-        ['san_juan', 'buitrera', 'endubaik', 'guindal', 'lastorres', 'pabellones'], 
-        ['san_juan'])
+        df['ruta'].unique(), 
+        df['ruta'].unique()[:2])
     
-    print(len(options))
             
 #     button = st.button("Print Locations",disabled=False)
 
@@ -143,21 +151,15 @@ st.write("")
 st.write("")
 
 
-chart1 = alt.Chart(san_juan).mark_area(opacity=0.3).encode(
+chart = alt.Chart(df).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
-    #color="dist_total"
-).properties(width=1800, height=200)
-
-chart2 = alt.Chart(buitrera).mark_area(opacity=0.3).encode(
-    x="dist_total:Q",
-    y=alt.Y("a_r:Q", stack=None),
-    #color="dist_total"
+    color= "ruta:N"
 ).properties(width=1800, height=200)
 
 
 # mostrar gráfico de altair
-st.altair_chart(chart1 + chart2)
+st.altair_chart(chart)
         
 # st.write(san_juan.head())
 st.write(   
