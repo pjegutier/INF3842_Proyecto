@@ -84,7 +84,7 @@ with row2_1:
     
     if len(options) == 1:
         layer1 = pdk.Layer(
-            'LineLayer',
+            'ScatterplotLayer',
             df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
             get_position=['lng', 'lt'],
             auto_highlight=True,
@@ -96,7 +96,7 @@ with row2_1:
             
     elif len(options) >= 2:
         layer1 = pdk.Layer(
-            'LineLayer',
+            'ScatterplotLayer',
             df.loc[df['ns1:Name'] == options[0]][['lng','lt']],
             get_position=['lng', 'lt'],
             auto_highlight=True,
@@ -105,7 +105,7 @@ with row2_1:
             pickable=True)
     
         layer2 = pdk.Layer(
-            'LineLayer',
+            'ScatterplotLayer',
             df.loc[df['ns1:Name'] == options[1]][['lng','lt']],
             get_position=['lng', 'lt'],
             auto_highlight=True,
