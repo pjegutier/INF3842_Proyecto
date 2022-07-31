@@ -80,8 +80,8 @@ with row2_1:
     st.write(lat,lon)
     
     view_state = pdk.ViewState(
-        longitude = lat,
-        latitude = lon,
+        longitude = round(lat,5),
+        latitude = round(lon,5),
         zoom = zoom,
         pitch = 50)
      
