@@ -75,27 +75,27 @@ else:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
     
-with row2_1:
-    st.write(
-        pdk.Deck(
-            map_style="mapbox://styles/mapbox/satellite-v9",
-            initial_view_state={
-                "latitude": lat,
-                "longitude": lon,
-                "zoom": zoom,
-                "pitch": 50,}
-        )
-    )        
-
-
-
 # with row2_1:
+#     st.write(
+#         pdk.Deck(
+#             map_style="mapbox://styles/mapbox/satellite-v9",
+#             initial_view_state={
+#                 "latitude": lat,
+#                 "longitude": lon,
+#                 "zoom": zoom,
+#                 "pitch": 50,}
+#         )
+#     )        
+
+
+
+with row2_1:
     
-#     viewstate = pdk.ViewState(
-#         longitude = -70.64933,
-#         latitude = -34.18082,
-#         zoom = zoom,
-#         pitch = 50)
+    viewstate = pdk.ViewState(
+        longitude = -70.64933,
+        latitude = -34.18082,
+        zoom = zoom,
+        pitch = 50)
     
     
     
@@ -110,18 +110,18 @@ with row2_1:
 #         extruded=True,
 #         coverage=1)
     
-# #     layer = pdk.Layer(
-# #         'ScatterplotLayer',
-# #     df,
-# #     get_position=['lng', 'lt'],
-# #     auto_highlight=True,
-# #     get_radius=1000,
-# #     get_fill_color='[180, 0, 200, 140]',
-# #     pickable=True)
+    layer = pdk.Layer(
+        'ScatterplotLayer',
+    df,
+    get_position=['lng', 'lt'],
+    auto_highlight=True,
+    get_radius=1000,
+    get_fill_color='[180, 0, 200, 140]',
+    pickable=True)
     
 #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
-#     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
-#     st.write(r)
+    r = pdk.Deck(layers=[layer], initial_view_state=view_state)
+    st.write(r)
 
 
 # primera ruta
