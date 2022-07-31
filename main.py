@@ -165,7 +165,7 @@ selection = alt.selection_multi(fields=['ns1:Name'], bind='legend')
 chart = alt.Chart(datos_sel).mark_area().encode(
     x=alt.X("dist_total:Q", title ='Distancia Recorrido [m]'),
     y=alt.Y("a_r:Q", stack=None, title = 'Altura Relativa [m]'),
-    color= alt.Color("ns1:Name:N", title = 'Rutas'),
+    color= alt.Color("ns1:Name:N", scale=alt.Scale(range=['blue','orange']), title = 'Rutas'),
     opacity=alt.condition(selection, alt.value(0.8), alt.value(0.4)) 
 ).properties(width=1300, height=200).add_selection(selection)
 
