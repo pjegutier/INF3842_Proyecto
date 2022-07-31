@@ -49,7 +49,7 @@ with row1_2:
     """
     )
     def val_sel(): # para seleccionar máximo 2 rutas
-        if len(options) >= 2:
+        if len(options) > 2:
             options = st.multiselect('Ha elegido más de 2 rutas, elija nuevamente',
                                      df['ns1:Name'].unique(), 
                                      df['ns1:Name'].unique()[:2], on_change = val_sel()) 
