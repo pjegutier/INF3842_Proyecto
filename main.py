@@ -144,7 +144,7 @@ st.write("")
 
 selection = alt.selection_multi(fields=['ruta'], bind='legend')
 
-chart = alt.Chart(df).mark_area(opacity=0.3).encode(
+chart = alt.Chart(df).mark_area().encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
