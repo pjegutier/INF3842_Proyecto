@@ -29,7 +29,7 @@ df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], i
 
 df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
 
-st.write(df2.head())
+st.write(df.head())
 
 #parametros
 zoom = 12 
