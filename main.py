@@ -168,7 +168,7 @@ chart = alt.Chart(datos_sel).mark_area().encode(
 ).properties(width=1300, height=200).add_selection(selection)
 
 #mostrar gráfico de altair
-chart
+st.altair_chart(chart)
 
 st.write(   
     """
