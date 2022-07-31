@@ -56,7 +56,7 @@ with row1_2:
         df['ns1:Name'].unique()[:2])
     
     if len(options) > 2:
-        st.write('Ha elegido más de 2 rutas, elija nuevamente, elimine selecciones')
+        st.write('Ha elegido más de 2 rutas, elimine selecciones')
     
 #parametros
 zoom = 12 
