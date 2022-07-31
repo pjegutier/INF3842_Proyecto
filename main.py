@@ -156,7 +156,7 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ruta:N",
-    opacity=alt.condition(selection, alt.value(1), alt.value(0.2)
+    opacity=alt.condition(selection, alt.value(1), alt.value(0.2))
 ).properties(width=1400, height=200).add_selection(selection)
 
 #st.write(options)
