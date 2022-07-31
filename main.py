@@ -77,6 +77,8 @@ row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
 with row2_1:
     
+    st.write(lat,lon)
+    
     view_state = pdk.ViewState(
         longitude = lat,
         latitude = lon,
