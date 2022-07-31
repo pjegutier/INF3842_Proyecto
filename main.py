@@ -155,10 +155,11 @@ selection = alt.selection_multi(fields=['ruta'], bind='legend')
 chart = alt.Chart(df).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
-    color= "ruta:N"
+    color= "ruta:N",
+    opacity=alt.condition(selection, alt.value(1), alt.value(0.2)
 ).properties(width=1400, height=200).add_selection(selection)
 
-st.write(df[options])
+st.write(options)
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
