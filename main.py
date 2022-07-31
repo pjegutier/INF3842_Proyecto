@@ -110,14 +110,14 @@ with row2_1:
         extruded=True,
         coverage=1)
     
-    layer = pdk.Layer(
-        'ScatterplotLayer',
-    df2,
-    get_position=['lng', 'lat'],
-    auto_highlight=True,
-    get_radius=1000,
-    get_fill_color='[180, 0, 200, 140]',
-    pickable=True)
+#     layer = pdk.Layer(
+#         'ScatterplotLayer',
+#     df,
+#     get_position=['lng', 'lt'],
+#     auto_highlight=True,
+#     get_radius=1000,
+#     get_fill_color='[180, 0, 200, 140]',
+#     pickable=True)
     
     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
