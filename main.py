@@ -25,7 +25,7 @@ pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
 df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
-# df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
 
 st.write(df.head())
 
