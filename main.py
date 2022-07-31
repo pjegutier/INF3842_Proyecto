@@ -88,6 +88,7 @@ else:
 df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
 
 with row2_1:
+    st.write('hola')
 #     viewstate = pdk.ViewState(
 #         longitude = -70.64933,
 #         latitude = -34.18082,
