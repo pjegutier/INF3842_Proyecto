@@ -27,6 +27,25 @@ pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
 df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
+df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+
+st.write(df2.head())
+
+#parametros
+zoom = 12 
+
+if len(options) == 1:
+    lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
+    lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5'])    
+elif len(options) == 2:
+    lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))/2
+    lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))/2
+    
+else:
+    lat = -34.18082 #machali
+    lon = -70.64933 #machali
+
+# configuracion pagina
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
 st.write('')
@@ -59,19 +78,6 @@ with row1_2:
     
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
-
-zoom = 12 
-
-if len(options) == 1:
-    lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
-    lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5'])    
-elif len(options) == 2:
-    lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))/2
-    lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))/2
-    
-else:
-    lat = -34.18082 #machali
-    lon = -70.64933 #machali
     
 # with row2_1:
 #     st.write(
@@ -85,7 +91,7 @@ else:
 #         )
 #     )        
 
-df2 = df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lat'}, inplace = True)
+
 
 with row2_1:
     st.write('hola')
@@ -167,16 +173,14 @@ chart = alt.Chart(datos_sel).mark_area().encode(
     opacity=alt.condition(selection, alt.value(1.0), alt.value(0.3)) 
 ).properties(width=1300, height=200).add_selection(selection)
 
-# mostrar gráfico de altair
-# st.altair_chart(chart)
+mostrar gráfico de altair
+st.altair_chart(chart)
 
-# st.write(   
-#     """
-#     ##
-#     Profesora: Tamara Cucumides\n
-#     Alumnos:   Luis Campos, Pablo Gutierrez 
+st.write(   
+    """
+    ##
+    Profesora: Tamara Cucumides\n
+    Alumnos:   Luis Campos, Pablo Gutierrez 
     
-#     """
-# )
-
-st.write(df2.head())
+    """
+)
