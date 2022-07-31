@@ -30,9 +30,6 @@ df.rename(columns = {'ns1:LongitudeDegrees5':'lng', 'ns1:LatitudeDegrees4':'lt'}
 # configuracion pagina
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
-st.write('')
-st.write('')
-
 # Lay Out Superior
 row1_1, row1_2 = st.columns((1, 2))
 
