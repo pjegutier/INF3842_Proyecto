@@ -142,7 +142,7 @@ with row2_3:
 st.write("")
 st.write("")
 
-selection = alt.selection_multi(fields=['ruta'], bind='legend')
+selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 
 chart = alt.Chart(df).mark_area().encode(
     x="dist_total:Q",
