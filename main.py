@@ -52,16 +52,12 @@ with row1_2:
         if len(options) > 2:
             options = st.multiselect('Ha elegido más de 2 rutas, elija nuevamente',
                                      df['ns1:Name'].unique(), 
-                                     df['ns1:Name'].unique()[:2], on_change = val_sel()) 
+                                     df['ns1:Name'].unique()[:2], on_change = val_sel())
     # lista de rutas
     options = st.multiselect(
         'Elige hasta 2 rutas para compararlas',
         df['ns1:Name'].unique(), 
-        df['ns1:Name'].unique()[:2])
-    
-    
-    
-    st.write('Elija 2 rutas')
+        df['ns1:Name'].unique()[:2], on_select = val_sel)
     
             
 #     button = st.button("Print Locations",disabled=False)
