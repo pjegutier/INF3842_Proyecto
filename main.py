@@ -120,7 +120,7 @@ with row2_1:
     pickable=True)
     
 #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
-    r = pdk.Deck(layers=[layer], initial_view_state=view_state)
+    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", layers=[layer], initial_view_state=view_state)
     st.write(r)
 
 
