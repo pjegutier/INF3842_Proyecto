@@ -101,8 +101,8 @@ with row2_1:
     
     layer = pdk.Layer(
         'HexagonLayer',
-        df2,
-        get_position=['lon', 'lat'],
+        df,
+        get_position=['lng', 'lt'],
         auto_highlight=True,
         elevation_scale=50,
         pickable=True,
