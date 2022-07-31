@@ -162,7 +162,7 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-df[options[0]]
+df.loc[df['ruta'] == options[0]]
 
 
         
