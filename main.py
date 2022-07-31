@@ -78,8 +78,8 @@ row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 with row2_1:
     
     view_state = pdk.ViewState(
-        longitude = -70.64933,
-        latitude = -34.18082,
+        longitude = lat,
+        latitude = lon,
         zoom = zoom,
         pitch = 50)
      
