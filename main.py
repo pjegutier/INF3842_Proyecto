@@ -155,8 +155,7 @@ selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
-    color= "ns1:Name:N",
-    opacity=alt.condition(selection, alt.value(1), alt.value(0.2))
+    color= "ns1:Name:N"
 ).properties(width=1300, height=200).add_selection(selection)
 
 # mostrar gráfico de altair
