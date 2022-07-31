@@ -142,9 +142,14 @@ with row2_3:
 st.write("")
 st.write("")
 
+
+st.write(len(option))
+
+#df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
+
 selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 
-chart = alt.Chart(df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]).mark_area().encode(
+chart = alt.Chart(df).mark_area().encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
