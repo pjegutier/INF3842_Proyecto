@@ -142,11 +142,6 @@ with row2_3:
 st.write("")
 st.write("")
 
-
-st.write(len(options))
-
-#df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
-
 if len(options) == 0:
     datos_sel = pd.DataFrame()
 elif len(options) == 1:
