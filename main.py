@@ -107,7 +107,7 @@ with row2_1:
     
     layer = pdk.Layer(
         'ScatterplotLayer',
-    UK_ACCIDENTS_DATA,
+    df2,
     get_position=['lng', 'lat'],
     auto_highlight=True,
     get_radius=1000,
@@ -116,7 +116,9 @@ with row2_1:
     
 #     r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
     r = pdk.Deck(layers=[layer], initial_view_state=view_state)
-    st.write(r)
+#     st.write(r)
+    
+    st.write(df2.head())
 
 
 # primera ruta
