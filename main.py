@@ -27,6 +27,8 @@ pabellones['dist_total'] = pabellones['d_r'].cumsum()
 
 df = pd.concat([san_juan, buitrera, endubaik, guindal, lastorres, pabellones], ignore_index = True)
 
+st.write(df.head())
+
 st.set_page_config(layout="wide", page_icon="🚲", page_title="Rutas en Bici")
 
 st.write('')
