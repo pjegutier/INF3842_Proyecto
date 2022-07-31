@@ -80,6 +80,8 @@ with row2_1:
         longitude = lon,
         latitude = lat,
         zoom = zoom,
+        min_zoom=5,
+        max_zoom=15,
         pitch = 50)
     
     if len(options) == 1:
