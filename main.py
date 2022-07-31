@@ -144,7 +144,7 @@ st.write("")
 
 selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 
-chart = alt.Chart(df).mark_area().encode(
+chart = alt.Chart(df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]).mark_area().encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
@@ -153,8 +153,6 @@ chart = alt.Chart(df).mark_area().encode(
 
 # mostrar gráfico de altair
 st.altair_chart(chart)
-
-df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
         
 # st.write(san_juan.head())
 st.write(   
