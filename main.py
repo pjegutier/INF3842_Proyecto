@@ -152,7 +152,7 @@ else:
 
 selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 
-chart = alt.Chart(datos_sel).mark_area().encode(
+chart = alt.Chart(datos_sel).mark_area(opacity=0.3).encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
