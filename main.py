@@ -33,11 +33,11 @@ st.write(df.head())
 zoom = 12 
 
 if len(options) == 1:
-    lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
-    lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5'])    
+    lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['lt'])
+    lon = np.mean(df.loc[df['ns1:Name'] == options[0]]['lng'])    
 elif len(options) == 2:
-    lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LatitudeDegrees4']))/2
-    lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LongitudeDegrees5']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['ns1:LongitudeDegrees5']))/2
+    lat = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lt']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lt']))/2
+    lon = (np.mean(df.loc[df['ns1:Name'] == options[0]]['lng']) + np.mean(df.loc[df['ns1:Name'] == options[1]]['lng']))/2
     
 else:
     lat = -34.18082 #machali
@@ -130,8 +130,8 @@ with row2_1:
 with row2_2:
     try:
         line = alt.Chart(df.loc[df['ns1:Name'] == options[0]]).mark_circle(size=30).encode(
-            x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
-            y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
+            x = alt.X('lt:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+            y = alt.Y('lng:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud'))
         ).properties(width=400, height=500)
 
         st.altair_chart(line)
@@ -142,8 +142,8 @@ with row2_2:
 with row2_3:
     try:
         line = alt.Chart(df.loc[df['ns1:Name'] == options[1]]).mark_circle(size=30).encode(
-            x = alt.X('ns1:LatitudeDegrees4:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
-            y = alt.Y('ns1:LongitudeDegrees5:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud')),
+            x = alt.X('lt:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Latitud')),
+            y = alt.Y('lng:Q',scale=alt.Scale(zero=False),axis=alt.Axis(title='Longitud')),
             color = alt.value("orange")
         ).properties(width=400, height=500)
     
