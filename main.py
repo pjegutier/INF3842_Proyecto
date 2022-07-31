@@ -60,7 +60,7 @@ with row1_2:
 
 row2_1, row2_2, row2_3 = st.columns((1, 1, 1))
 
-zoom = 6 
+zoom = 12 
 
 if len(options) == 1:
     lat = np.mean(df.loc[df['ns1:Name'] == options[0]]['ns1:LatitudeDegrees4'])
