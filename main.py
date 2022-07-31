@@ -50,19 +50,18 @@ with row1_2:
     )
     def val_sel(): # para seleccionar máximo 2 rutas
         if len(options) >= 2:
-            options.disabled = True
-        else:
-            options.disabled = False            
-            
+            options = st.multiselect('Ha elegido más de 2 rutas, elija nuevamente',
+                                     df['ns1:Name'].unique(), 
+                                     df['ns1:Name'].unique()[:2], on_change = val_sel()) 
     # lista de rutas
     options = st.multiselect(
-        'Elige entre 2 rutas para compararlas',
+        'Elige hasta 2 rutas para compararlas',
         df['ns1:Name'].unique(), 
-        df['ns1:Name'].unique()[:2])
+        df['ns1:Name'].unique()[:2], on_change = val_sel())
     
     
     
-    st.write('Rutas: Seleccionadas',len(options))
+    st.write('Elija 2 rutas')
     
             
 #     button = st.button("Print Locations",disabled=False)
