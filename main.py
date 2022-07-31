@@ -115,7 +115,7 @@ with row2_1:
     df[['lng','lt']],
     get_position=['lng', 'lt'],
     auto_highlight=True,
-    get_radius=2,
+    get_radius=50,
     get_fill_color='[180, 0, 200, 140]',
     pickable=True)
     
