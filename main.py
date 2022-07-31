@@ -48,7 +48,7 @@ with row1_2:
     .
     """
     )
-    def seleccion():
+    def val_sel(): # para seleccionar máximo 2 rutas
         if len(options) >= 2:
             options.disabled = True
         else:
@@ -60,7 +60,9 @@ with row1_2:
         df['ns1:Name'].unique(), 
         df['ns1:Name'].unique()[:2])
     
-    st.write(len(options))
+    
+    
+    st.write('Rutas: Seleccionadas',len(options))
     
             
 #     button = st.button("Print Locations",disabled=False)
