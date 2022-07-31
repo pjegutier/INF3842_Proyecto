@@ -147,9 +147,17 @@ st.write(len(options))
 
 #df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
 
+if len(options) == 0:
+    datos_sel = pd.DataFrame()
+elif len(options) == 1:
+    datos_sel = df.loc[df['ns1:Name'] == options[0]]
+else: 
+    datos_sel = df.loc[(df['ns1:Name'] == options[0]) | (df['ns1:Name'] == options[1])]
+    
+
 selection = alt.selection_multi(fields=['ns1:Name:N'], bind='legend')
 
-chart = alt.Chart(df).mark_area().encode(
+chart = alt.Chart(datos_sel).mark_area().encode(
     x="dist_total:Q",
     y=alt.Y("a_r:Q", stack=None),
     color= "ns1:Name:N",
