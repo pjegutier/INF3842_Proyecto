@@ -162,7 +162,8 @@ chart = alt.Chart(df).mark_area(opacity=0.3).encode(
 # mostrar gráfico de altair
 st.altair_chart(chart)
 
-st.write(df[locals()[options[0],locals()[options[1]].head())
+st.write(df[[locals()[options[0]],
+             locals()[options[1]]].head())
 
 
         
