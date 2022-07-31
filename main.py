@@ -91,6 +91,7 @@ with row2_1:
         latitude = lat,
         zoom = zoom,
         pitch = 50
+
     )
     layer = pdk.Layer(
         "HexagonLayer",
@@ -103,9 +104,9 @@ with row2_1:
         extruded=True,
         coverage=1)
 #    r = pdk.Deck(map_style="mapbox://styles/mapbox/satellite-v9", initial_view = viewstate)
-    r = pdk.Deck(initial_view = viewstate)
-    st.write(r)
-        
+    #r = pdk.Deck(initial_view = viewstate)
+    #st.write(r)
+    st.write(print(lon, lat))        
 
 # primera ruta
 with row2_2:
