@@ -1,4 +1,4 @@
-import altair as alt
+uimport altair as alt
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -60,7 +60,7 @@ with row1_2:
         df['ns1:Name'].unique(), 
         df['ns1:Name'].unique()[:2], disabled = True)
     
-    st.write(options.keys())
+    st.write(options.default)
     
             
 #     button = st.button("Print Locations",disabled=False)
